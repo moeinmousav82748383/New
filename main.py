@@ -2,7 +2,7 @@ import asyncio
 import logging
 import os
 from aiogram import Bot, Dispatcher, F
-from aiogram.types import Message, CallbackQuery
+from aiogram.types import Message, CallbackQuery, FSInputFile
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 
@@ -43,18 +43,25 @@ async def get_number(message: Message, state: FSMContext):
 
     await message.answer("⏳ در حال ساخت تصویر...")
 
-    img_path = generator.generate(num)
-
-    await message.answer_photo(
-        photo=open(img_path, "rb"),
-        caption="✅ نتیجه تشخیص ضریب آماده شد!",
-        reply_markup=next_keyboard()
-    )
-
     try:
-        os.remove(img_path)
-    except:
-        pass
+        img_path = generator.generate(num)
+        
+        # استفاده از FSInputFile برای Railway
+        photo = FSInputFile(img_path)
+        
+        await message.answer_photo(
+            photo=photo,
+            caption="✅ نتیجه تشخیص ضریب آماده شد!",
+            reply_markup=next_keyboard()
+        )
+        
+        # پاک کردن فایل بعد از ارسال
+        if os.path.exists(img_path):
+            os.remove(img_path)
+            
+    except Exception as e:
+        logging.error(f"Error generating image: {e}")
+        await message.answer("❌ خطا در ساخت تصویر. دوباره امتحان کنید.")
 
     await state.clear()
 
