@@ -26,15 +26,49 @@ async def start(message: Message):
     )
 
 @dp.callback_query(F.data == "detect_mines")
-async def detect(callback: CallbackQuery, state: FSMContext):
+async def detect_mines(callback: CallbackQuery, state: FSMContext):
+    """هندلر مشترک برای هر دو دکمه"""
     await callback.message.edit_text("💎 تعداد الماس را وارد کنید (۱ تا ۲۰):")
     await state.set_state(MinesStates.waiting_for_diamonds)
-    await callback.answer()
+    await callback.answer("✅ آماده دریافت تعداد الماس")
 
 @dp.message(MinesStates.waiting_for_diamonds)
 async def get_number(message: Message, state: FSMContext):
     try:
         num = int(message.text.strip())
+        if not 1 <= num <= 20:
+            raise ValueError
+    except:
+        await message.answer("❌ لطفاً یک عدد بین ۱ تا ۲۰ وارد کنید.")
+        return
+
+    await message.answer("⏳ در حال ساخت تصویر...")
+
+    try:
+        img_path = generator.generate(num)
+        photo = FSInputFile(img_path)
+        
+        await message.answer_photo(
+            photo=photo,
+            caption="✅ نتیجه تشخیص ضریب آماده شد!",
+            reply_markup=next_keyboard()
+        )
+        
+        if os.path.exists(img_path):
+            os.remove(img_path)
+            
+    except Exception as e:
+        logging.error(f"Error: {e}")
+        await message.answer("❌ خطا در ساخت تصویر. دوباره امتحان کنید.")
+
+    await state.clear()
+
+async def main():
+    print("🚀 بات شروع شد...")
+    await dp.start_polling(bot)
+
+if __name__ == "__main__":
+    asyncio.run(main())        num = int(message.text.strip())
         if not 1 <= num <= 20:
             raise ValueError
     except:
