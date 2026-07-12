@@ -19,18 +19,25 @@ dp = Dispatcher()
 @dp.message(Command("start"))
 async def start(message: Message):
     await message.answer(
-        "👋 <b>خوش آمدی به بات تشخیص ضریب Mines!</b>\n\n"
-        "روی دکمه زیر کلیک کن و تعداد الماس مورد نظرت رو وارد کن:",
+        "👋 <b>سلام امیر جان!</b>\n\n"
+        "به بات تشخیص ضریب Mines خوش آمدی ⚡\n\n"
+        "✅ دقت تشخیص:\n"
+        "• تعداد الماس زیر ۱۰ → خطای حدود ۳٪\n"
+        "• تعداد الماس بالای ۱۰ → خطای حدود ۸٪\n\n"
+        "روی دکمه زیر بزن و تعداد الماس مورد نظرت رو وارد کن:",
         reply_markup=start_keyboard(),
         parse_mode="HTML"
     )
 
 @dp.callback_query(F.data == "detect_mines")
 async def detect_mines(callback: CallbackQuery, state: FSMContext):
-    """هندلر مشترک برای هر دو دکمه"""
-    await callback.message.edit_text("💎 تعداد الماس را وارد کنید (۱ تا ۲۰):")
+    """هندلر مشترک برای شروع تشخیص"""
+    await callback.message.edit_text(
+        "💎 تعداد الماس را وارد کنید (۱ تا ۲۰):\n\n"
+        "دقت کن: زیر ۱۰ تا دقت بالاتر، بالای ۱۰ دقت کمی کمتره."
+    )
     await state.set_state(MinesStates.waiting_for_diamonds)
-    await callback.answer("✅ آماده دریافت تعداد الماس")
+    await callback.answer("✅ شروع شد")
 
 @dp.message(MinesStates.waiting_for_diamonds)
 async def get_number(message: Message, state: FSMContext):
@@ -39,7 +46,7 @@ async def get_number(message: Message, state: FSMContext):
         if not 1 <= num <= 20:
             raise ValueError
     except:
-        await message.answer("❌ لطفاً یک عدد بین ۱ تا ۲۰ وارد کنید.")
+        await message.answer("❌ لطفاً یک عدد صحیح بین ۱ تا ۲۰ وارد کنید.")
         return
 
     await message.answer("⏳ در حال ساخت تصویر...")
@@ -59,43 +66,7 @@ async def get_number(message: Message, state: FSMContext):
             
     except Exception as e:
         logging.error(f"Error: {e}")
-        await message.answer("❌ خطا در ساخت تصویر. دوباره امتحان کنید.")
-
-    await state.clear()
-
-async def main():
-    print("🚀 بات شروع شد...")
-    await dp.start_polling(bot)
-
-if __name__ == "__main__":
-    asyncio.run(main())        num = int(message.text.strip())
-        if not 1 <= num <= 20:
-            raise ValueError
-    except:
-        await message.answer("❌ لطفاً یک عدد بین ۱ تا ۲۰ وارد کنید.")
-        return
-
-    await message.answer("⏳ در حال ساخت تصویر...")
-
-    try:
-        img_path = generator.generate(num)
-        
-        # استفاده از FSInputFile برای Railway
-        photo = FSInputFile(img_path)
-        
-        await message.answer_photo(
-            photo=photo,
-            caption="✅ نتیجه تشخیص ضریب آماده شد!",
-            reply_markup=next_keyboard()
-        )
-        
-        # پاک کردن فایل بعد از ارسال
-        if os.path.exists(img_path):
-            os.remove(img_path)
-            
-    except Exception as e:
-        logging.error(f"Error generating image: {e}")
-        await message.answer("❌ خطا در ساخت تصویر. دوباره امتحان کنید.")
+        await message.answer("❌ خطا در ساخت تصویر. دوباره امتحان کن.")
 
     await state.clear()
 
