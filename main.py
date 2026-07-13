@@ -4,8 +4,8 @@ import asyncio
 import random
 
 # ==================== تنظیمات ====================
-API_ID = 12345678          # ← این رو با API_ID خودت عوض کن
-API_HASH = "your_api_hash_here"  # ← این رو با API_HASH خودت عوض کن
+API_ID = 26183570          # ← این رو با API_ID خودت عوض کن
+API_HASH = "77d151edb70ba4a170c25e8c814bc972"  # ← این رو با API_HASH خودت عوض کن
 PHONE = "+989055136616"
 
 app = Client("MoeinAgent", api_id=API_ID, api_hash=API_HASH, phone_number=PHONE)
