@@ -2,12 +2,11 @@ import asyncio
 import logging
 import os
 from aiogram import Bot, Dispatcher, F
-from aiogram.types import Message, CallbackQuery, FSInputFile
+from aiogram.types import Message, CallbackQuery, FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 
 from config import BOT_TOKEN
-from keyboards import start_keyboard, next_keyboard
 from image_generator import generator
 from states import MinesStates
 
@@ -16,25 +15,69 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
-@dp.message(Command("start"))
-async def start(message: Message):
+# پیام اشتراک به پایان رسیده
+async def subscription_expired(message: Message):
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="🔄 تمدید اشتراک", callback_data="renew_subscription")]
+    ])
+    
     await message.answer(
-        "👋 <b>سلام امیر جان!</b>\n\n"
-        "به بات تشخیص ضریب Mines خوش آمدی ⚡\n\n"
-        "✅ دقت تشخیص:\n"
-        "• تعداد الماس زیر ۱۰ → خطای حدود ۳٪\n"
-        "• تعداد الماس بالای ۱۰ → خطای حدود ۸٪\n\n"
-        "روی دکمه زیر بزن و تعداد الماس مورد نظرت رو وارد کن:",
-        reply_markup=start_keyboard(),
+        "⚠️ <b>اشتراک شما به پایان رسیده است!</b>\n\n"
+        "برای ادامه استفاده از بات تشخیص ضریب، لطفاً اشتراک خود را تمدید کنید.\n\n"
+        "امیر جان، برای دسترسی دوباره اقدام به تمدید کن.",
+        reply_markup=keyboard,
         parse_mode="HTML"
     )
 
-@dp.callback_query(F.data == "detect_mines")
-async def detect_mines(callback: CallbackQuery, state: FSMContext):
-    """هندلر مشترک برای شروع تشخیص"""
+@dp.message(Command("start"))
+async def start(message: Message):
+    await subscription_expired(message)
+
+@dp.callback_query(F.data == "renew_subscription")
+async def renew_subscription(callback: CallbackQuery):
     await callback.message.edit_text(
-        "💎 تعداد الماس را وارد کنید (۱ تا ۲۰):\n\n"
-        "دقت کن: زیر ۱۰ تا دقت بالاتر، بالای ۱۰ دقت کمی کمتره."
+        "✅ اشتراک با موفقیت تمدید شد!\n\n"
+        "حالا می‌تونی از بات استفاده کنی امیر جان ⚡\n\n"
+        "تعداد الماس مورد نظرت رو وارد کن (۱ تا ۲۰):"
+    )
+    # اینجا می‌تونی استیت رو ست کنی اگر خواستی مستقیم بره به دریافت عدد
+    await callback.answer("اشتراک تمدید شد")
+
+# برای سادگی فعلاً بدون FSM کامل نگه داشتم
+# اگر خواستی FSM کامل باشه بگو
+
+@dp.message()
+async def handle_messages(message: Message):
+    # اگر بعد از تمدید عدد فرستاد
+    if message.text and message.text.isdigit():
+        num = int(message.text)
+        if 1 <= num <= 20:
+            await message.answer("⏳ در حال ساخت تصویر...")
+            try:
+                img_path = generator.generate(num)
+                photo = FSInputFile(img_path)
+                
+                await message.answer_photo(
+                    photo=photo,
+                    caption="✅ نتیجه تشخیص ضریب آماده شد!",
+                    reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                        [InlineKeyboardButton(text="✅ تشخیص ضریب دست بعدی", callback_data="renew_subscription")]
+                    ])
+                )
+                if os.path.exists(img_path):
+                    os.remove(img_path)
+            except:
+                await message.answer("❌ خطا در ساخت تصویر.")
+            return
+    
+    await message.answer("ابتدا /start بزن.")
+
+async def main():
+    print("🚀 بات شروع شد...")
+    await dp.start_polling(bot)
+
+if __name__ == "__main__":
+    asyncio.run(main())        "دقت کن: زیر ۱۰ تا دقت بالاتر، بالای ۱۰ دقت کمی کمتره."
     )
     await state.set_state(MinesStates.waiting_for_diamonds)
     await callback.answer("✅ شروع شد")
