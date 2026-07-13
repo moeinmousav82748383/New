@@ -15,26 +15,40 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
-# پیام اشتراک به پایان رسیده
-async def subscription_expired(message: Message):
+
+async def show_subscription_expired(message: Message):
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🔄 تمدید اشتراک", callback_data="renew_subscription")]
+        [InlineKeyboardButton(text="📞 تماس برای تمدید", url="https://t.me/moein481")]
     ])
     
     await message.answer(
         "⚠️ <b>اشتراک شما به پایان رسیده است!</b>\n\n"
-        "برای ادامه استفاده از بات تشخیص ضریب، لطفاً اشتراک خود را تمدید کنید.\n\n"
-        "امیر جان، برای دسترسی دوباره اقدام به تمدید کن.",
+        "برای تمدید اشتراک و ادامه استفاده از بات،\n"
+        "به آیدی زیر پیام بده:\n\n"
+        "@moein481",
         reply_markup=keyboard,
         parse_mode="HTML"
     )
 
+
 @dp.message(Command("start"))
 async def start(message: Message):
-    await subscription_expired(message)
+    await show_subscription_expired(message)
 
-@dp.callback_query(F.data == "renew_subscription")
-async def renew_subscription(callback: CallbackQuery):
+
+# اگر کسی بعد از استارت عدد فرستاد، دوباره پیام اشتراک رو نشون بده
+@dp.message()
+async def any_message(message: Message):
+    await show_subscription_expired(message)
+
+
+async def main():
+    print("🚀 بات شروع شد...")
+    await dp.start_polling(bot)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())async def renew_subscription(callback: CallbackQuery):
     await callback.message.edit_text(
         "✅ اشتراک با موفقیت تمدید شد!\n\n"
         "حالا می‌تونی از بات استفاده کنی امیر جان ⚡\n\n"
