@@ -5,21 +5,24 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from aiogram import F
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
-
+# ==================== تنظیمات ====================
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN پیدا نشد! لطفاً در تنظیمات Railway متغیر رو اضافه کنید.")
+
 bot = Bot(token=BOT_TOKEN, parse_mode="HTML")
 dp = Dispatcher()
 
-# ==================== بانک پاسخ‌های متنوع ====================
+# ==================== بانک پاسخ‌ها (بیش از ۲۵ پاسخ) ====================
 
 responses = {
     "greeting": [
         "سلام دوست عزیز 👋\nبه خدمات ربات‌های هوشمند کازینو خوش آمدی 🔥",
-        "درود! 👋 خیلی خوشحالیم که اینجایی. چطور می‌تونم کمکت کنم؟",
-        "سلامت باشی! آماده‌ام که بهترین خدمات رو بهت ارائه بدم 💰"
+        "درود! خیلی خوشحالیم که اینجایی. چطور می‌تونم کمکت کنم؟ 💰",
+        "سلامت باشی! آماده‌ام برات بهترین خدمات رو ارائه بدم.",
+        "هلو! 👋 منتظر پیامت بودم."
     ],
     
     "price": [
@@ -35,6 +38,91 @@ responses = {
 
 <b>اشتراک نقره‌ای:</b>
 • ۱۲ ساعته: ۸۰ هزار تومان
+• ۲۴ ساعته: ۱۲۰ هزار تومان
+• هفتگی: ۵۳۰ هزار تومان
+• ماهانه: ۱,۶۰۰,۰۰۰ تومان
+
+<b>اشتراک طلایی:</b>
+• ۱۲ ساعته: ۱۵۰ هزار تومان
+• ۲۴ ساعته: ۲۸۰ هزار تومان
+• هفتگی: ۱,۷۰۰,۰۰۰ تومان
+• ماهانه: ۴,۵۰۰,۰۰۰ تومان
+
+<b>اشتراک VIP:</b>
+• ۱۲ ساعته: ۳۰۰ هزار تومان
+• ۲۴ ساعته: ۵۰۰ هزار تومان
+• هفتگی: ۳,۳۰۰,۰۰۰ تومان
+• ماهانه: ۱۰,۰۰۰,۰۰۰ تومان
+
+برای سفارش بگو مثلاً: «ماینز طلایی ماهانه»""",
+        "✅ لیست قیمت‌ها رو برات فرستادم. کدوم پکیج رو می‌خوای؟"
+    ],
+    
+    "percent": [
+        "✅ <b>بازی درصدی</b>\n\nحداقل واریز: ۵۰۰ هزار تومان\nما به جات بازی می‌کنیم (حداقل ۱۰ برابر) و ۷۰٪ سود مال توئه.\nمبلغ واریزی رو بگو.",
+        "🎯 بازی درصدی فعاله! از ۵۰۰ هزار شروع کن. ۷۰٪ سود به حسابت برمی‌گرده."
+    ],
+    
+    "order": [
+        "✅ درخواست ثبت شد! لطفاً بگو:\n• ربات (ماینز یا انفجار)\n• سطح\n• مدت زمان",
+        "عالیه! 🚀 جزئیات سفارش رو بگو (مثلاً: انفجار نقره‌ای هفتگی)"
+    ],
+    
+    "payment": [
+        "✅ بعد از پرداخت، اسکرین شات رسید رو بفرست تا فوری ربات رو فعال کنم.",
+        "ممنون! رسید پرداخت رو بفرست، سریع فعال‌سازی می‌کنم 🔥"
+    ],
+    
+    "thank": ["خواهش می‌کنم! ❤️", "ممنون از تو!", "خوشحالیم که کمکتون کردیم 💙"],
+    
+    "offline": "👨‍💼 ادمین در حال حاضر آفلاین است.\nبه محض آنلاین شدن، پیامت رو بررسی و جواب می‌ده.\nممنون از صبوری‌ات ❤️"
+}
+
+# ==================== هندلرها ====================
+
+@dp.message(Command("start"))
+async def start(message: types.Message):
+    await message.answer(random.choice(responses["greeting"]))
+
+@dp.message(F.text)
+async def smart_handler(message: types.Message):
+    text = message.text.lower().strip()
+    
+    if any(w in text for w in ["سلام", "درود", "هلو", "hi", "hey"]):
+        await message.answer(random.choice(responses["greeting"]))
+        return
+    
+    if any(w in text for w in ["قیمت", "لیست", "هزینه", "تعرفه", "چنده"]):
+        await message.answer(random.choice(responses["price"]))
+        return
+    
+    if any(w in text for w in ["درصدی", "درصد", "واریز", "شارژ"]):
+        await message.answer(random.choice(responses["percent"]))
+        return
+    
+    if any(w in text for w in ["خرید", "سفارش", "ماینز", "انفجار", "crash", "طلایی", "نقره", "برنز", "vip"]):
+        if any(w in text for w in ["پرداخت", "رسید", "واریز کردم"]):
+            await message.answer(random.choice(responses["payment"]))
+        else:
+            await message.answer(random.choice(responses["order"]))
+        return
+    
+    if any(w in text for w in ["ممنون", "مرسی", "تشکر"]):
+        await message.answer(random.choice(responses["thank"]))
+        return
+    
+    # پاسخ پیش‌فرض
+    await message.answer(responses["offline"])
+
+# ==================== اجرا ====================
+
+async def main():
+    logging.basicConfig(level=logging.INFO)
+    print("🤖 ربات هوشمند با موفقیت راه‌اندازی شد!")
+    await dp.start_polling(bot)
+
+if __name__ == "__main__":
+    asyncio.run(main())• ۱۲ ساعته: ۸۰ هزار تومان
 • ۲۴ ساعته: ۱۲۰ هزار تومان
 • هفتگی: ۵۳۰ هزار تومان
 • ماهانه: ۱,۶۰۰,۰۰۰ تومان
