@@ -1,7 +1,6 @@
 import asyncio
 import logging
 import random
-from datetime import datetime
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.filters import Command
@@ -15,8 +14,8 @@ dp = Dispatcher()
 
 
 def get_multiplier() -> str:
-    """تولید ضریب رندوم بین ۰.۰۰ تا ۳.۰۰ با دو رقم اعشار"""
-    multiplier = round(random.uniform(0.00, 3.00), 2)
+    """تولید ضریب رندوم بین ۱.۰۱ تا ۳.۱۷ با دو رقم اعشار"""
+    multiplier = round(random.uniform(1.01, 3.17), 2)
     return f"{multiplier:.2f}"
 
 
@@ -53,7 +52,6 @@ async def detect_crash(callback):
         parse_mode="HTML"
     )
     
-    # شبیه‌سازی پردازش
     await asyncio.sleep(1.5)
     
     await callback.message.answer(
