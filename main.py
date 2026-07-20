@@ -14,7 +14,7 @@ dp = Dispatcher()
 
 
 def get_multiplier() -> str:
-    """تولید ضریب رندوم بین ۱.۰۱ تا ۳.۱۷ با دو رقم اعشار"""
+    """تولید ضریب رندوم بین ۱.۰۱ تا ۳.۱۷"""
     multiplier = round(random.uniform(1.01, 3.17), 2)
     return f"{multiplier:.2f}"
 
@@ -34,10 +34,13 @@ def next_keyboard():
 @dp.message(Command("start"))
 async def start(message: Message):
     await message.answer(
-        f"👋 <b>سلام Frokh جان!</b>\n\n"
-        "🔰 <b>پنل طلایی فعال شد</b>\n"
-        "⏳ اشتراک ۶ ساعته تا <b>۲۹ تیر ساعت ۷ صبح</b> معتبر است.\n\n"
-        "برای تشخیص ضریب انفجار روی دکمه زیر بزن 👇",
+        "👋 <b>سلام Amir جان!</b>\n\n"
+        "🔰 <b>من Mamali هستم</b>، دستیار تشخیص ضریب اختصاصی تو.\n\n"
+        "📊 <b>سطح نقره‌ای - اشتراک ۱۲ ساعته</b>\n"
+        "⏳ اشتراک تا پایان ۱۲ ساعت معتبر است.\n\n"
+        "⚠️ <b>توجه:</b> این تشخیص ضریب مخصوص سایت <b>ناسا بت</b> هست\n"
+        "روی سایر سایت‌ها ممکن است دقت کمتری داشته باشد.\n\n"
+        "برای شروع تشخیص ضریب روی دکمه زیر بزن 👇",
         reply_markup=main_keyboard(),
         parse_mode="HTML"
     )
@@ -48,7 +51,7 @@ async def detect_crash(callback):
     multiplier = get_multiplier()
     
     await callback.message.edit_text(
-        f"🔍 <b>در حال تشخیص ضریب...</b>",
+        "🔍 <b>در حال تشخیص ضریب...</b>",
         parse_mode="HTML"
     )
     
@@ -57,7 +60,7 @@ async def detect_crash(callback):
     await callback.message.answer(
         f"✅ <b>ضریب تشخیص داده شد!</b>\n\n"
         f"🔥 <code>{multiplier}</code> x\n\n"
-        f"موفق باشی Frokh جان ⚡",
+        f"موفق باشی Amir جان ⚡",
         parse_mode="HTML",
         reply_markup=next_keyboard()
     )
@@ -68,13 +71,13 @@ async def detect_crash(callback):
 @dp.message()
 async def other_messages(message: Message):
     await message.answer(
-        "لطفاً از دکمه‌های موجود استفاده کن Frokh جان.",
+        "لطفاً از دکمه‌های موجود استفاده کن Amir جان.",
         reply_markup=main_keyboard()
     )
 
 
 async def main():
-    print("🚀 ربات تشخیص ضریب انفجار شروع شد...")
+    print("🚀 ربات Mamali شروع شد...")
     await dp.start_polling(bot)
 
 
