@@ -37,6 +37,54 @@ async def start(message: Message):
         "👋 <b>سلام Moein جان!</b>\n\n"
         "🔰 <b>من Moein هستم</b>، دستیار تست اختصاصی تو.\n\n"
         "📊 <b>اشتراک تست - مدت نامحدود</b>\n"
+        "⏳ اشتراک برای تست و بدون محدودیت زمانی فعال است.\n\n"
+        "⚠️ <b>توجه:</b> این تشخیص ضریب مخصوص سایت <b>ناسا بت</b> هست\n"
+        "روی سایر سایت‌ها ممکن است دقت کمتری داشته باشد.\n\n"
+        "برای شروع تشخیص ضریب روی دکمه زیر بزن 👇",
+        reply_markup=main_keyboard(),
+        parse_mode="HTML"
+    )
+
+
+@dp.callback_query(F.data == "detect_crash")
+async def detect_crash(callback):
+    multiplier = get_multiplier()
+    
+    await callback.message.edit_text(
+        "🔍 <b>در حال تشخیص ضریب...</b>",
+        parse_mode="HTML"
+    )
+    
+    await asyncio.sleep(1.5)
+    
+    await callback.message.answer(
+        f"✅ <b>ضریب تشخیص داده شد!</b>\n\n"
+        f"🔥 <code>{multiplier}</code> x\n\n"
+        f"موفق باشی Moein جان ⚡",
+        parse_mode="HTML",
+        reply_markup=next_keyboard()
+    )
+    
+    await callback.answer("ضریب تولید شد")
+
+
+@dp.message()
+async def other_messages(message: Message):
+    await message.answer(
+        "لطفاً از دکمه‌های موجود استفاده کن Moein جان.",
+        reply_markup=main_keyboard()
+    )
+
+
+async def main():
+    print("🚀 ربات تست شروع شد...")
+    await dp.start_polling(bot)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())        "👋 <b>سلام Moein جان!</b>\n\n"
+        "🔰 <b>من Moein هستم</b>، دستیار تست اختصاصی تو.\n\n"
+        "📊 <b>اشتراک تست - مدت نامحدود</b>\n"
         "⏳ این اشتراک برای تست و بدون محدودیت زمانی فعال است.\n\n"
         "⚠️ <b>توجه:</b> این تشخیص ضریب مخصوص سایت <b>ناسا بت</b> هست\n"
         "روی سایر سایت‌ها ممکن است دقت کمتری داشته باشد.\n\n"
