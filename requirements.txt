@@ -1,4 +1,4 @@
-python-telegram-bot
+python-telegram-bot[job-queue]==22.8
 pyTelegramBotAPI==4.36.0
 aiogram==3.13.0
 python-dotenv==1.0.1
