@@ -1,0 +1,424 @@
+2026-07-28 23:24:56,691 - INFO - در حال اتصال به تلگرام...
+2026-07-28 23:24:56,695 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2026-07-28 23:24:58,997 - WARNING - Attempt 1 at connecting failed: ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
+2026-07-28 23:25:02,285 - WARNING - Attempt 2 at connecting failed: ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
+2026-07-28 23:25:05,602 - WARNING - Attempt 3 at connecting failed: ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
+2026-07-28 23:25:08,834 - WARNING - Attempt 4 at connecting failed: ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
+2026-07-28 23:25:12,147 - WARNING - Attempt 5 at connecting failed: ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
+2026-07-28 23:26:36,634 - INFO - در حال اتصال به تلگرام...
+2026-07-28 23:26:36,634 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2026-07-28 23:26:40,725 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2026-07-28 23:26:55,631 - INFO - Phone migrated to 4
+2026-07-28 23:26:56,342 - INFO - Reconnecting to new data center 4
+2026-07-28 23:26:57,252 - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2026-07-28 23:26:57,253 - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2026-07-28 23:26:57,253 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-28 23:27:03,542 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-28 23:27:30,000 - ERROR - خطای کلی: Returned when all available options for this type of number were already used (e.g. flash-call, then SMS, then this error might be returned to trigger a second resend) (caused by ResendCodeRequest)
+2026-07-28 23:27:34,176 - INFO - در حال اتصال به تلگرام...
+2026-07-28 23:27:34,176 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-28 23:27:34,184 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-28 23:27:43,556 - WARNING - Telegram is having internal issues AuthRestartError: Restart the authorization process (caused by SendCodeRequest)
+2026-07-28 23:28:28,463 - WARNING - Server closed the connection: 0 bytes read on a total of 8 expected bytes
+2026-07-28 23:28:28,463 - INFO - Connection closed while receiving data: 0 bytes read on a total of 8 expected bytes
+2026-07-28 23:28:28,464 - INFO - Closing current connection to begin reconnect...
+2026-07-28 23:28:28,464 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-28 23:28:28,473 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-28 23:28:32,095 - ERROR - خطای کلی: Returned when all available options for this type of number were already used (e.g. flash-call, then SMS, then this error might be returned to trigger a second resend) (caused by ResendCodeRequest)
+2026-07-28 23:28:40,565 - INFO - در حال اتصال به تلگرام...
+2026-07-28 23:28:40,565 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-28 23:28:40,609 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-28 23:28:52,762 - WARNING - Telegram is having internal issues AuthRestartError: Restart the authorization process (caused by SendCodeRequest)
+2026-07-28 23:29:43,614 - INFO - وارد شدید: Moein | ID: 8007177524
+2026-07-28 23:29:43,614 - INFO - ربات پشتیبانی آکادمی لونا با موفقیت فعال شد.
+2026-07-28 23:30:11,493 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:30:11,957 - INFO - Got difference for channel 1837141901 updates
+2026-07-28 23:30:12,700 - INFO - Got difference for channel 1537215323 updates
+2026-07-28 23:30:26,052 - INFO - پیام از 8270569828 (Mohammad Moein): سلام...
+2026-07-28 23:30:45,759 - INFO - پیام از 8270569828 (Mohammad Moein): چطوری به شما اعتماد کنم؟...
+2026-07-28 23:30:58,202 - INFO - پیام از 8270569828 (Mohammad Moein): سابقه...
+2026-07-28 23:30:58,761 - WARNING - Server closed the connection: 0 bytes read on a total of 8 expected bytes
+2026-07-28 23:30:58,762 - INFO - Connection closed while receiving data: 0 bytes read on a total of 8 expected bytes
+2026-07-28 23:30:58,762 - INFO - Closing current connection to begin reconnect...
+2026-07-28 23:30:58,762 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-28 23:30:58,767 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-28 23:31:06,361 - INFO - Got difference for account updates
+2026-07-28 23:31:06,363 - INFO - پیام از 8270569828 (Mohammad Moein): خوبه...
+2026-07-28 23:31:07,527 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:31:07,618 - INFO - نوتیفیکیشن به ادمین ارسال شد | کاربر: 8270569828
+2026-07-28 23:31:18,489 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:31:29,318 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:31:44,432 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:31:58,792 - WARNING - Server closed the connection: 0 bytes read on a total of 8 expected bytes
+2026-07-28 23:31:58,792 - INFO - Connection closed while receiving data: 0 bytes read on a total of 8 expected bytes
+2026-07-28 23:31:58,792 - INFO - Closing current connection to begin reconnect...
+2026-07-28 23:31:58,792 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-28 23:31:58,796 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-28 23:32:09,666 - INFO - Got difference for account updates
+2026-07-28 23:32:10,217 - INFO - Got difference for channel 3987975984 updates
+2026-07-28 23:32:10,889 - INFO - Got difference for channel 2222964531 updates
+2026-07-28 23:32:11,492 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:32:12,197 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:32:12,888 - INFO - Got difference for channel 1719395385 updates
+2026-07-28 23:32:13,380 - INFO - Got difference for channel 1363743119 updates
+2026-07-28 23:32:13,381 - INFO - پیام از 8591660697 (اپلودر): This bot can’t be displayed because it was used to spread po...
+2026-07-28 23:32:14,584 - INFO - نوتیفیکیشن به ادمین ارسال شد | کاربر: 8591660697
+2026-07-28 23:32:30,774 - INFO - Got difference for account updates
+2026-07-28 23:32:31,672 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:32:32,881 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:32:34,309 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:32:34,898 - INFO - Got difference for channel 3852395150 updates
+2026-07-28 23:32:35,688 - INFO - Got difference for account updates
+2026-07-28 23:32:37,618 - INFO - پیام از 7796213802 (محافظ توت هات): رفقای دلم یه وط/نی🇮🇷 مشتی براتون آوردم❤️
+
+آقاییش از سر کار ا...
+2026-07-28 23:32:38,378 - INFO - Got difference for channel 1719395385 updates
+2026-07-28 23:32:38,700 - INFO - نوتیفیکیشن به ادمین ارسال شد | کاربر: 7796213802
+2026-07-28 23:32:41,848 - INFO - Got difference for account updates
+2026-07-28 23:32:42,689 - INFO - Got difference for channel 3929287967 updates
+2026-07-28 23:32:43,477 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:32:48,016 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:32:50,307 - INFO - Got difference for channel 1719395385 updates
+2026-07-28 23:32:52,132 - INFO - Got difference for account updates
+2026-07-28 23:32:52,590 - INFO - Got difference for channel 2222964531 updates
+2026-07-28 23:32:53,540 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:32:54,276 - INFO - Got difference for account updates
+2026-07-28 23:32:54,696 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:52:09,551 - INFO - در حال اتصال به تلگرام...
+2026-07-28 23:52:09,552 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-28 23:52:09,559 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-28 23:52:14,784 - INFO - وارد شدید: Moein | ID: 8007177524
+2026-07-28 23:52:14,785 - INFO - ربات پشتیبانی آکادمی لونا با موفقیت فعال شد.
+2026-07-28 23:52:27,101 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:53:00,928 - INFO - در حال اتصال به تلگرام...
+2026-07-28 23:53:00,928 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-28 23:53:00,937 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-28 23:53:13,535 - INFO - وارد شدید: Moein | ID: 8007177524
+2026-07-28 23:53:13,536 - INFO - ربات پشتیبانی آکادمی لونا با موفقیت فعال شد.
+2026-07-28 23:53:18,049 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:53:34,670 - INFO - Got difference for channel 2645443991 updates
+2026-07-28 23:53:44,954 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:53:47,497 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:53:50,262 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:53:58,373 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:53:59,359 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:54:01,665 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:54:04,560 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:54:05,521 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:54:08,750 - WARNING - Server closed the connection: 0 bytes read on a total of 8 expected bytes
+2026-07-28 23:54:08,751 - INFO - Connection closed while receiving data: 0 bytes read on a total of 8 expected bytes
+2026-07-28 23:54:08,751 - INFO - Closing current connection to begin reconnect...
+2026-07-28 23:54:08,751 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-28 23:54:08,795 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-28 23:54:19,154 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:54:19,639 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:54:20,245 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:54:29,614 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:54:30,037 - INFO - Got difference for channel 3929287967 updates
+2026-07-28 23:54:43,038 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:54:43,876 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:54:46,048 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:54:47,732 - INFO - پیام معتبر از 8270569828 (Mohammad Moein): سلام...
+2026-07-28 23:54:55,118 - INFO - Got difference for account updates
+2026-07-28 23:54:56,107 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:54:56,509 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:54:57,402 - INFO - Got difference for channel 3647756975 updates
+2026-07-28 23:55:01,072 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:55:09,733 - ERROR - Unhandled exception on handle_message
+Traceback (most recent call last):
+  File "C:\Users\NR\AppData\Local\Programs\Python\Python312\Lib\site-packages\telethon\client\updates.py", line 605, in _dispatch_update
+    await callback(event)
+  File "c:\Users\NR\Desktop\Me\py class\دستیار هوشمند فروش\فروش تلگرام\support.py", line 253, in handle_message
+    if sender.id == OWNER_ID:
+       ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2026-07-28 23:55:09,861 - INFO - Got difference for channel 2222964531 updates
+2026-07-28 23:55:11,320 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:55:14,019 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:55:14,878 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:55:16,945 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:55:17,961 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:55:23,749 - INFO - Got difference for channel 2222964531 updates
+2026-07-28 23:55:28,107 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:55:38,710 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:55:40,796 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:55:41,416 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:55:44,229 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:55:46,020 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:56:10,378 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:56:11,336 - INFO - Got difference for channel 1719395385 updates
+2026-07-28 23:56:12,083 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:56:13,476 - INFO - Got difference for channel 3987975984 updates
+2026-07-28 23:56:15,246 - INFO - Got difference for channel 2222964531 updates
+2026-07-28 23:56:15,666 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:56:21,258 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:56:22,450 - INFO - Got difference for channel 1537215323 updates
+2026-07-28 23:56:37,667 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:56:38,852 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:56:39,829 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:56:40,395 - INFO - Got difference for channel 3929287967 updates
+2026-07-28 23:56:40,909 - INFO - پیام معتبر از 8270569828 (Mohammad Moein): خوبی...
+2026-07-28 23:56:41,967 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:56:43,316 - INFO - Got difference for channel 1719395385 updates
+2026-07-28 23:56:44,647 - INFO - نوتیفیکیشن به ادمین ارسال شد | کاربر: 8270569828
+2026-07-28 23:56:46,603 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:56:47,726 - INFO - Got difference for channel 2222964531 updates
+2026-07-28 23:56:48,999 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:56:49,892 - INFO - Got difference for channel 2252808061 updates
+2026-07-28 23:56:50,381 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:56:51,287 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:57:03,002 - INFO - Got difference for channel 1537215323 updates
+2026-07-28 23:57:03,523 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:57:08,366 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:57:10,478 - INFO - Got difference for channel 1199608803 updates
+2026-07-28 23:57:11,080 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:57:12,895 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:57:13,317 - INFO - Got difference for channel 1719395385 updates
+2026-07-28 23:57:15,368 - INFO - Got difference for channel 4451974587 updates
+2026-07-28 23:57:17,433 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:57:27,358 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:57:28,645 - INFO - Got difference for channel 2222964531 updates
+2026-07-28 23:57:47,022 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:57:47,501 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:57:48,147 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:57:48,576 - INFO - Got difference for channel 1719395385 updates
+2026-07-28 23:58:10,624 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:58:11,307 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:58:26,872 - INFO - Got difference for channel 1837141901 updates
+2026-07-28 23:58:28,012 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:58:29,698 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:58:30,126 - INFO - Got difference for channel 2222964531 updates
+2026-07-28 23:58:30,919 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:58:32,073 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:59:11,663 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:59:12,645 - INFO - Got difference for channel 1537215323 updates
+2026-07-28 23:59:13,167 - INFO - Got difference for channel 1719395385 updates
+2026-07-28 23:59:14,693 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:59:16,024 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:59:17,144 - INFO - Got difference for channel 3852395150 updates
+2026-07-28 23:59:17,792 - INFO - Got difference for channel 3929287967 updates
+2026-07-28 23:59:18,444 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:59:20,027 - INFO - Got difference for channel 1218263384 updates
+2026-07-28 23:59:21,217 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:59:30,736 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:59:34,113 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:59:49,177 - INFO - Got difference for channel 2222964531 updates
+2026-07-28 23:59:50,406 - INFO - Got difference for channel 1837141901 updates
+2026-07-28 23:59:50,828 - INFO - Got difference for channel 1881500180 updates
+2026-07-28 23:59:51,294 - INFO - Got difference for channel 1537215323 updates
+2026-07-28 23:59:52,242 - INFO - Got difference for channel 1579850308 updates
+2026-07-28 23:59:56,993 - INFO - Got difference for channel 1661518461 updates
+2026-07-28 23:59:58,085 - INFO - Got difference for channel 2645443991 updates
+2026-07-28 23:59:59,752 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:00:01,377 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:00:10,402 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:00:11,004 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:00:11,659 - INFO - Got difference for channel 4451974587 updates
+2026-07-29 00:00:12,483 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:00:13,072 - INFO - Got difference for channel 1719395385 updates
+2026-07-29 00:00:16,999 - INFO - Got difference for channel 1789001933 updates
+2026-07-29 00:00:19,256 - WARNING - Telegram is having internal issues PersistentTimestampOutdatedError: Persistent timestamp outdated (caused by GetChannelDifferenceRequest)
+2026-07-29 00:00:21,949 - INFO - Got difference for channel 2645443991 updates
+2026-07-29 00:00:22,974 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:00:25,485 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:01:10,038 - INFO - Got difference for channel 1719395385 updates
+2026-07-29 00:01:10,715 - INFO - Got difference for channel 1837141901 updates
+2026-07-29 00:01:11,671 - INFO - Got difference for channel 3987975984 updates
+2026-07-29 00:01:13,737 - INFO - Got difference for channel 2447348403 updates
+2026-07-29 00:01:14,191 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:01:15,750 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:01:16,774 - INFO - Got difference for channel 1945412238 updates
+2026-07-29 00:01:17,596 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:01:29,428 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:01:33,804 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:01:34,908 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:01:46,560 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:01:47,312 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:01:52,515 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:01:53,612 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:01:56,566 - INFO - Got difference for channel 1537215323 updates
+2026-07-29 00:01:56,972 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:02:10,447 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:02:14,027 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:02:15,591 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:02:17,393 - INFO - Got difference for channel 1719395385 updates
+2026-07-29 00:02:19,371 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:03:04,721 - INFO - Got difference for channel 1537215323 updates
+2026-07-29 00:03:05,735 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:03:08,363 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:03:08,813 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:03:09,522 - INFO - Got difference for channel 2645443991 updates
+2026-07-29 00:03:10,576 - INFO - Got difference for channel 4451974587 updates
+2026-07-29 00:03:13,089 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:03:13,669 - INFO - Got difference for channel 1719395385 updates
+2026-07-29 00:03:14,704 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:03:15,481 - INFO - Got difference for channel 3929287967 updates
+2026-07-29 00:03:29,264 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:03:29,829 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:03:30,409 - INFO - Got difference for channel 1199608803 updates
+2026-07-29 00:03:31,587 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:03:33,078 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:03:34,463 - INFO - Got difference for channel 1719395385 updates
+2026-07-29 00:04:10,501 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:04:11,269 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:04:11,824 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:04:12,285 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:05:11,761 - ERROR - Unhandled exception on handle_message
+Traceback (most recent call last):
+  File "C:\Users\NR\AppData\Local\Programs\Python\Python312\Lib\site-packages\telethon\client\updates.py", line 605, in _dispatch_update
+    await callback(event)
+  File "c:\Users\NR\Desktop\Me\py class\دستیار هوشمند فروش\فروش تلگرام\support.py", line 253, in handle_message
+    if sender.id == OWNER_ID:
+       ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2026-07-29 00:05:11,773 - ERROR - Unhandled exception on handle_message
+Traceback (most recent call last):
+  File "C:\Users\NR\AppData\Local\Programs\Python\Python312\Lib\site-packages\telethon\client\updates.py", line 605, in _dispatch_update
+    await callback(event)
+  File "c:\Users\NR\Desktop\Me\py class\دستیار هوشمند فروش\فروش تلگرام\support.py", line 253, in handle_message
+    if sender.id == OWNER_ID:
+       ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2026-07-29 00:05:11,850 - ERROR - Unhandled exception on handle_message
+Traceback (most recent call last):
+  File "C:\Users\NR\AppData\Local\Programs\Python\Python312\Lib\site-packages\telethon\client\updates.py", line 605, in _dispatch_update
+    await callback(event)
+  File "c:\Users\NR\Desktop\Me\py class\دستیار هوشمند فروش\فروش تلگرام\support.py", line 253, in handle_message
+    if sender.id == OWNER_ID:
+       ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2026-07-29 00:05:12,454 - INFO - Got difference for channel 1199608803 updates
+2026-07-29 00:05:13,478 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:05:14,525 - INFO - Got difference for channel 2222964531 updates
+2026-07-29 00:05:15,728 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:05:16,470 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:05:17,911 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:05:19,291 - INFO - Got difference for channel 3929287967 updates
+2026-07-29 00:05:55,257 - INFO - Got difference for channel 2222964531 updates
+2026-07-29 00:05:56,237 - INFO - Got difference for channel 1719395385 updates
+2026-07-29 00:05:57,004 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:05:57,513 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:05:58,091 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:05:58,859 - INFO - Got difference for channel 4451974587 updates
+2026-07-29 00:05:59,768 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:06:00,707 - INFO - Got difference for channel 2222964531 updates
+2026-07-29 00:06:01,076 - INFO - Got difference for channel 2645443991 updates
+2026-07-29 00:06:04,722 - ERROR - Unhandled exception on handle_message
+Traceback (most recent call last):
+  File "C:\Users\NR\AppData\Local\Programs\Python\Python312\Lib\site-packages\telethon\client\updates.py", line 605, in _dispatch_update
+    await callback(event)
+  File "c:\Users\NR\Desktop\Me\py class\دستیار هوشمند فروش\فروش تلگرام\support.py", line 253, in handle_message
+    if sender.id == OWNER_ID:
+       ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2026-07-29 00:06:05,060 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:06:08,750 - WARNING - Server closed the connection: 0 bytes read on a total of 8 expected bytes
+2026-07-29 00:06:08,751 - INFO - Connection closed while receiving data: 0 bytes read on a total of 8 expected bytes
+2026-07-29 00:06:08,751 - INFO - Closing current connection to begin reconnect...
+2026-07-29 00:06:08,752 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-29 00:06:08,760 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-29 00:06:30,802 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:06:31,664 - INFO - Got difference for channel 1719395385 updates
+2026-07-29 00:06:32,077 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:06:32,538 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:06:33,579 - INFO - Got difference for channel 2222964531 updates
+2026-07-29 00:06:34,609 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:06:44,955 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:06:45,606 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:06:47,047 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:06:47,620 - INFO - Got difference for channel 3647756975 updates
+2026-07-29 00:07:03,311 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:07:03,754 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:07:09,542 - ERROR - Unhandled exception on handle_message
+Traceback (most recent call last):
+  File "C:\Users\NR\AppData\Local\Programs\Python\Python312\Lib\site-packages\telethon\client\updates.py", line 605, in _dispatch_update
+    await callback(event)
+  File "c:\Users\NR\Desktop\Me\py class\دستیار هوشمند فروش\فروش تلگرام\support.py", line 253, in handle_message
+    if sender.id == OWNER_ID:
+       ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2026-07-29 00:07:09,834 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:07:10,239 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:07:19,039 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:07:19,781 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:07:20,210 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:07:21,362 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:07:32,044 - INFO - Got difference for channel 1062423186 updates
+2026-07-29 00:07:32,478 - INFO - Got difference for channel 3929287967 updates
+2026-07-29 00:07:33,410 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:07:34,317 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:07:34,691 - INFO - Got difference for channel 3647756975 updates
+2026-07-29 00:07:35,625 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:07:42,787 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:07:47,483 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:07:51,791 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:08:02,173 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:08:02,847 - INFO - Got difference for channel 2222964531 updates
+2026-07-29 00:08:10,403 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:08:27,045 - INFO - Got difference for channel 3049028260 updates
+2026-07-29 00:08:29,296 - INFO - Got difference for channel 2250725068 updates
+2026-07-29 00:08:46,340 - INFO - Got difference for channel 1363743119 updates
+2026-07-29 00:09:01,169 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:09:01,606 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:09:02,779 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:09:03,481 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:09:03,943 - INFO - Got difference for channel 4451974587 updates
+2026-07-29 00:09:11,063 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:09:40,292 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:09:41,428 - INFO - Got difference for channel 2222964531 updates
+2026-07-29 00:09:41,954 - INFO - پیام معتبر از 8214362053 (...): سلام...
+2026-07-29 00:09:42,484 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:09:43,154 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:09:43,676 - INFO - Got difference for channel 1062423186 updates
+2026-07-29 00:09:44,160 - INFO - Got difference for channel 3929287967 updates
+2026-07-29 00:09:44,530 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:09:45,902 - INFO - پیام معتبر از 8214362053 (...): سلام...
+2026-07-29 00:09:47,347 - INFO - Got difference for channel 1719395385 updates
+2026-07-29 00:09:48,858 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:09:53,260 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:09:53,651 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:09:55,507 - INFO - Got difference for account updates
+2026-07-29 00:09:59,204 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:10:01,539 - INFO - Got difference for channel 2222964531 updates
+2026-07-29 00:10:02,363 - INFO - پیام معتبر از 8214362053 (...): استخدام شدی؟...
+2026-07-29 00:10:04,081 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 00:10:10,450 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 00:10:11,761 - INFO - Got difference for channel 1719395385 updates
+2026-07-29 00:10:13,371 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 00:10:14,405 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 00:10:14,826 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 12:50:39,610 - INFO - در حال اتصال به تلگرام...
+2026-07-29 12:50:39,611 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-29 12:50:45,326 - WARNING - Attempt 1 at connecting failed: ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
+2026-07-29 12:50:56,234 - WARNING - Attempt 2 at connecting failed: ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
+2026-07-29 12:51:02,948 - WARNING - Attempt 3 at connecting failed: ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
+2026-07-29 12:51:13,950 - WARNING - Attempt 4 at connecting failed: TimeoutError: 
+2026-07-29 12:51:17,310 - WARNING - Attempt 5 at connecting failed: ConnectionRefusedError: [WinError 1225] The remote computer refused the network connection
+2026-07-29 12:54:00,498 - INFO - در حال اتصال به تلگرام...
+2026-07-29 12:54:00,498 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-29 12:54:00,510 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-29 12:54:04,449 - INFO - وارد شدید: Moein | ID: 8007177524
+2026-07-29 12:54:04,450 - INFO - ربات پشتیبانی آکادمی لونا با موفقیت فعال شد.
+2026-07-29 12:54:15,534 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 12:54:16,644 - INFO - Got difference for channel 3647756975 updates
+2026-07-29 12:54:17,986 - INFO - Got difference for channel 1881500180 updates
+2026-07-29 12:54:19,516 - INFO - پیام معتبر از 8270569828 (Mohammad Moein): سلام...
+2026-07-29 12:54:25,790 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 12:54:27,031 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 12:54:31,887 - INFO - پیام معتبر از 8270569828 (Mohammad Moein): میخوام استخدام بشم...
+2026-07-29 12:54:34,875 - WARNING - Server closed the connection: 0 bytes read on a total of 8 expected bytes
+2026-07-29 12:54:34,876 - INFO - Connection closed while receiving data: 0 bytes read on a total of 8 expected bytes
+2026-07-29 12:54:34,876 - INFO - Closing current connection to begin reconnect...
+2026-07-29 12:54:34,876 - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2026-07-29 12:54:34,886 - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2026-07-29 12:54:42,280 - INFO - Got difference for channel 2222964531 updates
+2026-07-29 12:54:48,050 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 12:54:48,943 - INFO - Got difference for channel 1537215323 updates
+2026-07-29 12:54:50,451 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 12:54:51,316 - INFO - پیام معتبر از 8270569828 (Mohammad Moein): با ادمین میخوام حرف بزنم...
+2026-07-29 12:54:51,506 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 12:54:53,420 - INFO - نوتیفیکیشن به ادمین ارسال شد | کاربر: 8270569828
+2026-07-29 12:54:57,604 - INFO - Got difference for channel 1218263384 updates
+2026-07-29 12:54:58,262 - INFO - Got difference for channel 1661518461 updates
+2026-07-29 12:54:59,508 - INFO - Got difference for channel 1579850308 updates
+2026-07-29 12:55:03,380 - INFO - Got difference for channel 1881500180 updates
